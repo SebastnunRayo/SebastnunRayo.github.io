@@ -1,0 +1,41 @@
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 25px;
+    margin: 10px;
+    border: 10;
+    border-color: rgba(0, 0, 0, 0);
+    border-style: solid;
+}
+
+img:hover{
+    border: 10;
+    animation: degradeo 5s 0s 0s 0 0 linear;
+    border-style: solid;
+}
+
+.swap-on-hover {
+    position: relative;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.swap-on-hover img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 400px;
+    height: 400px;
+}
+
+.swap-on-hover .swap-on-hover__front-image {
+    z-index: 9999;
+    transition: opacity .5s linear;
+    cursor: pointer;
+}
+
+
+.swap-on-hover:hover > .swap-on-hover__front-image {
+    opacity: 0;
+}
